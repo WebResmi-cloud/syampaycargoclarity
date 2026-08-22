@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PT SYAMPAY CARGO CLARITY - Air Cargo Logistics & Warehouse Facility</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A192F',
+                        brandBlue: '#0052CC',
+                        accentOrange: '#FF6B00',
+                        lightBg: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-lightBg antialiased overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+
+                <!-- LOGO PERUSAHAAN -->
+                <a href="#beranda" class="flex items-center space-x-2 sm:space-x-3">
+                    <img src="img/logo.png" alt="Logo PT SYAMPAY CARGO CLARITY"
+                        class="h-9 sm:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='img/logo.png';">
+                    <div class="border-l border-gray-300 pl-2 sm:pl-3">
+                        <span
+                            class="text-[10px] sm:text-xs font-bold text-brandBlue tracking-wider sm:tracking-widest block uppercase">PT
+                            SYAMPAY CARGO CLARITY</span>
+                        <span class="text-[8px] sm:text-[10px] text-gray-500 font-semibold uppercase block">SWIFT
+                            DELIVER</span>
+                    </div>
+                </a>
+
+                <!-- Nav Menu Desktop -->
+                <nav class="hidden lg:flex space-x-6 font-medium text-gray-600 text-sm">
+                    <a href="#beranda" class="hover:text-brandBlue transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-brandBlue transition">Tentang Kami</a>
+                    <a href="#armada" class="hover:text-brandBlue transition">Armada Pesawat</a>
+                    <a href="#gudang" class="hover:text-brandBlue transition">Fasilitas Gudang</a>
+                    <a href="#kepercayaan" class="hover:text-brandBlue transition">Kepercayaan</a>
+                    <a href="#layanan" class="hover:text-brandBlue transition">Layanan</a>
+                    <a href="#kontak" class="hover:text-brandBlue transition">Kontak</a>
+                </nav>
+
+                <!-- CTA Button Desktop & Mobile Hamburger Toggle -->
+                <div class="flex items-center space-x-3">
+                    <a href="https://wa.me/message/CYOJKROHAMMFP1" target="_blank"
+                        class="hidden sm:inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-base sm:text-lg mr-2"></i> Hubungi Kami
+                    </a>
+
+                    <!-- Hamburger Button Mobile -->
+                    <button id="menu-btn"
+                        class="lg:hidden text-navy focus:outline-none p-2 rounded-lg hover:bg-gray-100">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#beranda"
+                class="mobile-link block py-2 text-gray-700 font-medium hover:text-brandBlue border-b border-gray-50">Beranda</a>
+            <a href="#tentang"
+                class="mobile-link block py-2 text-gray-700 font-medium hover:text-brandBlue border-b border-gray-50">Tentang
+                Kami</a>
+            <a href="#armada"
+                class="mobile-link block py-2 text-gray-700 font-medium hover:text-brandBlue border-b border-gray-50">Armada
+                Pesawat</a>
+            <a href="#gudang"
+                class="mobile-link block py-2 text-gray-700 font-medium hover:text-brandBlue border-b border-gray-50">Fasilitas
+                Gudang</a>
+            <a href="#kepercayaan"
+                class="mobile-link block py-2 text-gray-700 font-medium hover:text-brandBlue border-b border-gray-50">Kepercayaan</a>
+            <a href="#layanan"
+                class="mobile-link block py-2 text-gray-700 font-medium hover:text-brandBlue border-b border-gray-50">Layanan</a>
+            <a href="#kontak" class="mobile-link block py-2 text-gray-700 font-medium hover:text-brandBlue">Kontak</a>
+            <a href="https://wa.me/message/CYOJKROHAMMFP1" target="_blank"
+                class="flex items-center justify-center w-full bg-emerald-600 text-white font-semibold py-3 rounded-lg mt-4">
+                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Hubungi Kami via WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda"
+        class="relative bg-navy text-white pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32 overflow-hidden">
+        <!-- GAMBAR BACKGROUND HERO -->
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center"
+            style="background-image: url('img/pesawat-utama.jpg');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span
+                        class="bg-brandBlue/30 text-brandBlue text-xs sm:text-sm font-semibold px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-brandBlue/40 inline-block mb-3 sm:mb-4">
+                        <i class="fa-solid fa-shield-halved mr-2 text-emerald-400"></i> Solusi Logistik Terpercaya &
+                        Aman
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4 sm:mb-6">
+                        Pengiriman Kargo Udara Cepat, Akurat & Terjamin.
+                    </h1>
+                    <p class="text-gray-300 text-sm sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                        Kepercayaan Anda adalah prioritas utama kami. <strong>PT SYAMPAY CARGO CLARITY</strong>
+                        menghadirkan kepastian pengiriman kargo udara dengan jaminan keamanan tinggi, armada pesawat
+                        siap pakai, dan sistem pelacakan transparan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="#armada"
+                            class="bg-accentOrange hover:bg-orange-600 text-white font-bold px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl shadow-lg text-center text-sm sm:text-base transition transform hover:-translate-y-1">
+                            Lihat Armada Pesawat
+                        </a>
+                        <a href="#gudang"
+                            class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl border border-white/20 text-center text-sm sm:text-base transition backdrop-blur-sm">
+                            Fasilitas Gudang
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative mt-4 lg:mt-0" data-aos="zoom-in" data-aos-duration="2500" data-aos-delay="800">
+                    <!-- WADAH LOGO: Dibuat menyatu tanpa garis kotak -->
+                    <div class="relative rounded-2xl overflow-hidden bg-white/5 backdrop-blur-[2px] group p-6">
+                        <!-- FOTO LOGO SCC: Ditambahkan brightness & contrast agar logo lebih menonjol -->
+                        <img src="img/logo.png" alt="Syampay Cargo Clarity Logo"
+                            class="w-full h-auto object-contain brightness-110 contrast-125 group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Stat Ringkasan -->
+    <section class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <span class="block text-2xl sm:text-4xl font-extrabold text-navy">99.8%</span>
+                    <span class="text-xs sm:text-sm text-gray-500 font-medium">Ketepatan Waktu</span>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <span class="block text-2xl sm:text-4xl font-extrabold text-brandBlue">10.000+</span>
+                    <span class="text-xs sm:text-sm text-gray-500 font-medium">Pengiriman Sukses</span>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <span class="block text-2xl sm:text-4xl font-extrabold text-navy">24/7</span>
+                    <span class="text-xs sm:text-sm text-gray-500 font-medium">Monitoring & Keamanan</span>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <span class="block text-2xl sm:text-4xl font-extrabold text-accentOrange">100%</span>
+                    <span class="text-xs sm:text-sm text-gray-500 font-medium">Jaminan Kepercayaan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Khusus Armada Pesawat -->
+    <section id="armada" class="py-12 sm:py-20 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
+                <span class="text-brandBlue font-bold tracking-wider uppercase text-xs sm:text-sm">Fasilitas
+                    Udara</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-navy mt-1 sm:mt-2">Galeri Armada Pesawat Kargo</h2>
+                <p class="text-gray-600 text-xs sm:text-base mt-2 sm:mt-4">Dukungan pesawat kargo komersial dan
+                    freighter modern yang menjamin kapasitas muat besar dan pengiriman bebas hambatan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- FOTO PESAWAT 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="img/pesawat-1.jpg" alt="Pesawat Kargo Boeing"
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                        <span
+                            class="absolute top-3 right-3 bg-brandBlue text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Heavy
+                            Cargo</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-navy mb-1">Boeing Air Freighter</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm">Digunakan untuk pengiriman kargo muatan besar &
+                            berat antar pulau serta rute internasional.</p>
+                    </div>
+                </div>
+
+                <!-- FOTO PESAWAT 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="img/pesawat-2.jpg" alt="Pesawat Express Cargo"
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                        <span
+                            class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Express
+                            Flight</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-navy mb-1">Express Delivery Aircraft</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm">Armada penerbangan cepat untuk pengiriman dokumen
+                            penting dan komoditas mendesak.</p>
+                    </div>
+                </div>
+
+                <!-- FOTO PESAWAT 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="img/pesawat-3.webp" alt="Pesawat Landas Apron"
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                        <span
+                            class="absolute top-3 right-3 bg-brandBlue text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Direct
+                            Flight</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-navy mb-1">Airport Apron Operations</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm">Akses langsung di apron bandara utama memastikan
+                            transisi barang dari gudang ke pesawat sangat efisien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Gudang & Proses Penanganan Barang -->
+    <section id="gudang" class="py-12 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
+                <span class="text-brandBlue font-bold tracking-wider uppercase text-xs sm:text-sm">Fasilitas Darat &
+                    Handling</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-navy mt-1 sm:mt-2">Kawasan Gudang & Proses Pengiriman
+                    Barang</h2>
+                <p class="text-gray-600 text-xs sm:text-base mt-2 sm:mt-4">Dokumentasi penanganan kargo udara, penataan
+                    penyimpanan barang, serta operasional gudang pra-penerbangan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
+                <!-- FOTO GUDANG LOADING -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-navy h-60 sm:h-72"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/gudang-loading.jpeg" alt="Proses Loading Cargo ke Pesawat"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent p-4 sm:p-6 flex flex-col justify-end">
+                        <span class="text-[10px] sm:text-xs text-accentOrange font-bold uppercase tracking-wider"><i
+                                class="fa-solid fa-boxes-stacked mr-1"></i> Air Handling</span>
+                        <h3 class="text-sm sm:text-lg font-bold text-white mt-1">Proses Loading Cargo ke Pesawat</h3>
+                    </div>
+                </div>
+
+
+                <!-- FOTO GUDANG DOCKING -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-navy h-60 sm:h-72"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/gudang-docking.avif" alt="Area Loading & Unloading Armada"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent p-4 sm:p-6 flex flex-col justify-end">
+                        <span class="text-[10px] sm:text-xs text-accentOrange font-bold uppercase tracking-wider"><i
+                                class="fa-solid fa-truck-ramp-box mr-1"></i> Docking Area</span>
+                        <h3 class="text-sm sm:text-lg font-bold text-white mt-1">Area Loading & Unloading Armada</h3>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-navy h-60 sm:h-72"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/gudang-eksterior.jpeg" alt="Kawasan Depan Gudang & Area Parkir Armada"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent p-4 sm:p-6 flex flex-col justify-end">
+                        <span class="text-[10px] sm:text-xs text-accentOrange font-bold uppercase tracking-wider"><i
+                                class="fa-solid fa-building mr-1"></i> Exterior View</span>
+                        <h3 class="text-sm sm:text-lg font-bold text-white mt-1">Kawasan Depan Gudang & Area Parkir
+                            Armada Logistik</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Tur Gudang -->
+        <div class="bg-navy rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-white shadow-xl" data-aos="fade-up"
+            data-aos-duration="1000">
+            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div>
+                    <span
+                        class="text-brandBlue font-bold tracking-wider uppercase text-xs sm:text-sm block mb-1 sm:mb-2">Tur
+                        Virtual</span>
+                    <h3 class="text-xl sm:text-3xl font-bold mb-3 sm:mb-4">Video Profil Kawasan Gudang & Operasional
+                    </h3>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
+                        Saksikan aktivitas harian di kawasan PT Syampay Cargo Clarity. Kami memastikan pengelolaan stok,
+                        handling kargo udara, serta prosedur standar keselamatan dikerjakan secara profesional.
+                    </p>
+                    <div class="flex items-center space-x-4 text-xs sm:text-sm font-semibold">
+                        <span class="flex items-center"><i class="fa-solid fa-video text-accentOrange mr-2"></i> Quality
+                            Check</span>
+                        <span class="flex items-center"><i class="fa-solid fa-plane text-brandBlue mr-2"></i> Direct
+                            Air-Hub</span>
+                    </div>
+                </div>
+
+                <div
+                    class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-black">
+                    <video class="w-full h-full object-cover" controls poster="img/gudang-interior.webp">
+                        <source src="img/video-gudang.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
+                </div>
+                <div
+                    class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-black">
+                    <video class="w-full h-full object-cover" controls poster="img/gudang-interior.webp">
+                        <source src="img/video-gudang2.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
+                </div>
+                <div
+                    class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-black">
+                    <video class="w-full h-full object-cover" controls poster="img/gudang-interior.webp">
+                        <source src="img/video-gudang3.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
+                </div>
+                <div
+                    class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-black">
+                    <video class="w-full h-full object-cover" controls poster="img/gudang-interior.webp">
+                        <source src="img/video-gudang4.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
+                </div>
+                <div
+                    class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-black">
+                    <video class="w-full h-full object-cover" controls poster="img/gudang-interior.webp">
+                        <source src="img/video-gudang5.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Seksi Kepercayaan Pelanggan (Customer Trust) -->
+    <section id="kepercayaan" class="py-12 sm:py-20 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-navy to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden"
+                data-aos="fade-up">
+
+                <div
+                    class="absolute -right-10 -bottom-10 w-64 h-64 bg-brandBlue/20 rounded-full blur-3xl pointer-events-none">
+                </div>
+
+                <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                    <span class="text-accentOrange font-bold tracking-wider uppercase text-xs sm:text-sm block mb-2">
+                        <i class="fa-solid fa-handshake mr-1"></i> Mengapa Pelanggan Percaya Pada Kami
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold">Komitmen Tanpa Kompromi Untuk Keamanan Kargo Anda
+                    </h2>
+                    <p class="text-gray-300 text-xs sm:text-base mt-3">
+                        "Kami memahami bahwa setiap paket dan kargo yang diamanahkan bukan sekadar barang, melainkan
+                        roda penggerak bisnis dan kepercayaan pelanggan Anda."
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 text-left">
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-accentOrange/50 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-12 h-12 bg-accentOrange/20 text-accentOrange rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Transparansi Nyata (Clarity)</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                            Tidak ada biaya tersembunyi. Anda mendapatkan pembaruan status kargo yang jelas, riil, dan
+                            dapat dipertanggungjawabkan dari awal penyerahan hingga sampai ke alamat penerima.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-brandBlue/50 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-12 h-12 bg-brandBlue/30 text-brandBlue rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Keamanan Standar Tinggi</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                            Didukung dengan perlindungan handling profesional, fasilitas gudang terpantau CCTV 24 jam,
+                            dan prosedur ketat pencegahan kerusakan barang selama penerbangan.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Jaminan Ketepatan Jadwal</h3>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                            Kami bermitra dengan jaringan penerbangan kargo terluas untuk memastikan slot kargo Anda
+                            selalu siap dan terkirim sesuai dengan estimasi waktu (On-Time Guarantee).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-white/10 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <p class="text-xs sm:text-sm text-gray-300 italic max-w-2xl mx-auto">
+                        "Setiap harinya kami melayani puluhan perusahaan B2B, UMKM, dan perorangan. Rasa aman dan
+                        kepuasan Anda adalah bukti nyata reputasi PT SYAMPAY CARGO CLARITY."
+                    </p>
+                    <span class="block text-xs font-semibold text-accentOrange mt-3 uppercase tracking-widest">—
+                        Manajemen PT SYAMPAY CARGO CLARITY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Perusahaan -->
+    <section id="tentang" class="py-12 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span class="text-brandBlue font-bold tracking-wider uppercase text-xs sm:text-sm">Tentang
+                        Perusahaan</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-navy mt-1 sm:mt-2 mb-4 sm:mb-6">PT SYAMPAY CARGO
+                        CLARITY</h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
+                        Kami adalah penyedia layanan ekosistem logistik dan kargo udara yang berdedikasi tinggi dalam
+                        memberikan solusi distribusi super cepat. Berbasis pada transparansi informasi (Clarity), kami
+                        memastikan seluruh proses penanganan barang berjalan terstruktur dan terpantau.
+                    </p>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+                        Dengan fasilitas pergudangan khusus yang dirancang untuk efisiensi muat & bongkar
+                        (loading/unloading), kami mampu menangani berbagai skala pengiriman—mulai dari dokumen penting,
+                        general cargo, barang berat, hingga komoditas bernilai tinggi.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <div class="flex items-center space-x-3 bg-lightBg p-3.5 sm:p-4 rounded-xl border border-gray-200 shadow-sm"
+                            data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fa-solid fa-plane-up text-brandBlue text-lg sm:text-xl"></i>
+                            <span class="font-semibold text-xs sm:text-sm text-navy">Kargo Udara Prioritas</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-lightBg p-3.5 sm:p-4 rounded-xl border border-gray-200 shadow-sm"
+                            data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fa-solid fa-warehouse text-emerald-500 text-lg sm:text-xl"></i>
+                            <span class="font-semibold text-xs sm:text-sm text-navy">Area Gudang Luas & Clean</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-navy rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-xl">
+                        <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brandBlue mb-3 sm:mb-4"></i>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-4">Visi Kami</h3>
+                        <p class="text-gray-300 italic text-xs sm:text-sm mb-6">
+                            "Menjadi penyedia jasa kargo udara dan pusat logistik pergudangan terdepan di Indonesia yang
+                            diakui atas ketepatan, kecepatan, dan kredibilitas."
+                        </p>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Fasilitas Keunggulan</h3>
+                        <ul class="space-y-2 text-gray-300 text-xs sm:text-sm">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-accentOrange mr-2 mt-0.5"></i>
+                                Penanganan Handling Air Freight Berstandar Resmi.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-accentOrange mr-2 mt-0.5"></i>
+                                Area Loading Dock Akses Mudah Truk & Kontainer.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-accentOrange mr-2 mt-0.5"></i>
+                                Keamanan Non-stop 24 Jam & Monitoring Kamera CCTV.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami -->
+    <section id="layanan" class="py-12 sm:py-20 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
+                <span class="text-brandBlue font-bold tracking-wider uppercase text-xs sm:text-sm">Layanan Utama</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-navy mt-1 sm:mt-2">Solusi Kargo Udara & Pergudangan</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue/10 text-brandBlue rounded-xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6">
+                        <i class="fa-solid fa-plane-arrival"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-navy mb-2 sm:mb-3">Port to Port (P2P)</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Pengiriman dari bandara asal langsung ke
+                        bandara tujuan dengan pengurusan manifes cepat dan aman.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue/10 text-brandBlue rounded-xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-navy mb-2 sm:mb-3">Door to Door (D2D)</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Layanan penjemputan dari gudang Anda
+                        hingga diantarkan tepat sampai ke alamat tujuan penerima.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 bg-brandBlue/10 text-brandBlue rounded-xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6">
+                        <i class="fa-solid fa-boxes-packing"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-navy mb-2 sm:mb-3">Warehousing & Storage</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Penampungan sementara dan pengelolaan
+                        barang kargo pra-penerbangan di gudang kami yang aman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Hubungi Kami & Formulir -->
+    <section id="kontak" class="py-12 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span class="text-brandBlue font-bold tracking-wider uppercase text-xs sm:text-sm">Hubungi
+                        Kami</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-navy mt-1 sm:mt-2 mb-4 sm:mb-6">Mari Berdiskusi
+                        Kebutuhan Logistik Anda</h2>
+                    <p class="text-gray-600 text-xs sm:text-base mb-6 sm:mb-8">Hubungi tim kami untuk survey kawasan
+                        gudang atau berkonsultasi mengenai pengiriman kargo udara.</p>
+
+                
+
+                        <div class="space-y-4 sm:space-y-6">
+                            <!-- Alamat Gudang & Kantor (Membuka Google Maps App) -->
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <a href="https://maps.app.goo.gl/X2zAXwDu9YM29J5H7"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="w-9 h-9 sm:w-10 sm:h-10 bg-red-100 text-red-600 hover:bg-red-200 transition-colors rounded-lg flex items-center justify-center text-base sm:text-lg mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </a>
+                                <div>
+                                    <h4 class="font-bold text-sm sm:text-base text-navy">Alamat Gudang & Kantor</h4>
+                                    <p class="text-gray-500 text-xs sm:text-sm"> Gedung GATRANS Bandar udara soekarno
+                                        hatta,
+                                        komplek Terminal kargo, JL. Cengkareng Golf Club, RT.001/RW.010, pajang,
+                                        Kec.Benda,
+                                        kota tangerang, Banten 15126</p>
+                                </div>
+                            </div>
+
+                            <!-- Email Respon Cepat (Membuka Aplikasi Email/Gmail) -->
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <a href="mailto:scargoclarity@gmail.com"
+                                    class="w-9 h-9 sm:w-10 sm:h-10 bg-rose-100 text-rose-600 hover:bg-rose-200 transition-colors rounded-lg flex items-center justify-center text-base sm:text-lg mt-0.5 shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <div>
+                                    <h4 class="font-bold text-sm sm:text-base text-navy">Email Respon Cepat</h4>
+                                    <a href="mailto:scargoclarity@gmail.com"
+                                        class="text-gray-500 hover:text-rose-600 transition-colors text-xs sm:text-sm block">scargoclarity@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- WhatsApp / Telepon (Membuka Aplikasi WhatsApp) -->
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <a href="https://wa.me/628139929963" target="_blank" rel="noopener noreferrer"
+                                    class="w-9 h-9 sm:w-10 sm:h-10 bg-emerald-100 text-emerald-600 hover:bg-emerald-200 transition-colors rounded-lg flex items-center justify-center text-base sm:text-lg mt-0.5 shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                                <div>
+                                    <h4 class="font-bold text-sm sm:text-base text-navy">WhatsApp / Telepon</h4>
+                                    <a href="https://wa.me/628139929963" target="_blank" rel="noopener noreferrer"
+                                        class="text-gray-500 hover:text-emerald-600 transition-colors text-xs sm:text-sm block">+62
+                                        813-9929-963</a>
+                                </div>
+                            </div>
+
+                            <!-- Instagram (Membuka Aplikasi Instagram / Profile) -->
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <a href="https://www.instagram.com/syampaycargoclarity?igsi=MXkxeGc0aTdueTk0Nw==" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white hover:opacity-90 transition-opacity rounded-lg flex items-center justify-center text-base sm:text-lg mt-0.5 shrink-0 shadow-sm">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <div>
+                                    <h4 class="font-bold text-sm sm:text-base text-navy">Instagram</h4>
+                                    <a href="https://www.instagram.com/syampaycargoclarity?igsi=MXkxeGc0aTdueTk0Nw==" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-gray-500 hover:text-purple-600 transition-colors text-xs sm:text-sm block">PT
+                                        Syampay Cargo Clarity</a>
+                                </div>
+                            </div>
+
+                            <!-- Facebook (Membuka Aplikasi Facebook / Profile) -->
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <a href="https://www.facebook.com/share/1LFmRTKoJJ/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="w-9 h-9 sm:w-10 sm:h-10 bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors rounded-lg flex items-center justify-center text-base sm:text-lg mt-0.5 shrink-0">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <div>
+                                    <h4 class="font-bold text-sm sm:text-base text-navy">Facebook</h4>
+                                    <a href="https://www.facebook.com/share/1LFmRTKoJJ/" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-gray-500 hover:text-blue-600 transition-colors text-xs sm:text-sm block">PT
+                                        Syampay Cargo Clarity</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-lightBg p-6 sm:p-8 rounded-2xl border border-gray-200 mt-4 md:mt-0"
+                            data-aos="fade-left" data-aos-duration="1000">
+                            <h3 class="text-lg sm:text-xl font-bold text-navy mb-4">Formulir Konsultasi & Penawaran</h3>
+                            <form onsubmit="kirimPesan(event)">
+                                <div class="mb-3 sm:mb-4">
+                                    <label class="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">Nama
+                                        Lengkap /
+                                        Perusahaan</label>
+                                    <input type="text" id="nama"
+                                        class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-brandBlue outline-none bg-white"
+                                        required>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
+                                    <div>
+                                        <label class="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">Kota
+                                            Asal</label>
+                                        <input type="text" id="asal"
+                                            class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-brandBlue outline-none bg-white"
+                                            required>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">Kota
+                                            Tujuan</label>
+                                        <input type="text" id="tujuan"
+                                            class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-brandBlue outline-none bg-white"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-xs sm:text-sm font-semibold text-gray-700 mb-1">Detail
+                                        Kargo /
+                                        Pertanyaan Gudang</label>
+                                    <textarea id="detail" rows="3"
+                                        class="w-full px-3.5 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm rounded-lg border border-gray-300 focus:ring-2 focus:ring-brandBlue outline-none bg-white"
+                                        required></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-brandBlue hover:bg-blue-700 text-white font-bold py-3 rounded-lg text-xs sm:text-sm transition shadow-md">
+                                    Kirim via WhatsApp
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+
+    </section>
+    <div class="lokasi" style="text-align: center; width: 100%; max-width: 1000px; margin: 0 auto; padding: 20px;">
+
+        <h1 style="font-weight: bold; font-size: 24px; margin-bottom: 20px;">Lokasi Gudang</h1>
+        <h3 style="font-weight: bold; font-size: 20px; margin-bottom: 20px;"> PT SYAMPAY CARGO CLARITY</h3>
+
+        <!-- Container untuk map responsif -->
+        <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.039189430241!2d106.6646749!3d-6.1254287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a030064ba30af%3A0x881a46287cc42f84!2sPT%20SYAMPAY%20CARGO%20CLARITY!5e0!3m2!1sid!2sid!4v1787375244433!5m2!1sid!2sid"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-navy text-gray-400 py-8 sm:py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs sm:text-sm">
+            <p>&copy; 2026 PT SYAMPAY CARGO CLARITY.</p>
+        </div>
+    </footer>
+
+    <!-- Script AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+            offset: 120
+        });
+
+        // Toggle Hamburger Menu Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Handler WhatsApp Form
+        function kirimPesan(e) {
+            e.preventDefault();
+            const nama = document.getElementById('nama').value;
+            const asal = document.getElementById('asal').value;
+            const tujuan = document.getElementById('tujuan').value;
+            const detail = document.getElementById('detail').value;
+
+            const noWA = "08139929963";
+            const teks = `Halo PT SYAMPAY CARGO CLARITY, saya ingin bertanya info pengiriman & fasilitas gudang:%0A%0A- *Nama*: ${nama}%0A- *Kota Asal*: ${asal}%0A- *Kota Tujuan*: ${tujuan}%0A- *Detail*: ${detail}`;
+
+            window.open(`https://wa.me/${noWA}?text=${teks}`, '_blank');
+        }
+    </script>
+</body>
+
+</html>
