@@ -764,6 +764,7 @@
         const teksEncoded = encodeURIComponent(pesanRaw);
 
         window.open(`https://wa.me/${noWA}?text=${teksEncoded}`, '_blank');
+        event.target.reset();
     }
 </script>
 </body>
